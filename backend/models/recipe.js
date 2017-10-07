@@ -6,6 +6,10 @@ var RecipeSchema = new mongoose.Schema({
     type: String,
     unique: true
   },
+  recipeTitle: {
+    type: String,
+    unique: false
+  },
   ingredient: {
     type: String,
     unique: false
@@ -16,6 +20,10 @@ var RecipeSchema = new mongoose.Schema({
   },
   author: {
     type: String,
+    unique: false
+  },
+  public: {
+    type: Boolean,
     unique: false
   },
 });

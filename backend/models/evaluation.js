@@ -2,7 +2,7 @@ var mongoose = require( 'mongoose' );
 var Schema = mongoose.Schema;
 
 var EvaluationSchema = new mongoose.Schema({
-  recetteName: {
+  recipeName: {
     type: String,
     unique: false
   },
@@ -16,7 +16,7 @@ var EvaluationSchema = new mongoose.Schema({
   },
   author: {
   	type: String,
-  	unique: false
+  	unique: true
   }
 });
 
