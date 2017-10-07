@@ -1,19 +1,18 @@
 {
   "name": "projetPersonnel",
-  "version": "1.0.0",
-  "description": "projet personnel site de cuisine",
+  "version": "0.1.0",
+  "description": "projet personnel d'un petit site de cuisine",
   "main": "server.js",
   "scripts": {
     "test": "\"echo hello\""
   },
   "author": "guillaumereg",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4",
+    "body-parser": "~1.17.2",
+    "express": "~4.16.1",
     "jsonwebtoken": "^7.4.3",
-    "mongoose": "^4.11.8",
-    "morgan": "^1.8.2",
-    "path": "^0.12.8"
+    "mongoose": "^4.11.14",
+    "morgan": "~1.8.2",
+    "path": "^0.12.7"
   }
 }

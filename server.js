@@ -6,8 +6,8 @@ var mongoose = require('mongoose');
 var path = require('path');
 var router = express.Router();
 
-var Utilisateur = require('./backend/models/utilisateur.js');
-var Recette = require('./backend/models/recette.js');
+var User= require('./backend/models/user.js');
+var Recipe = require('./backend/models/recipe.js');
 var Evaluation = require('./backend/models/evaluation.js');
 
 var appRoutes = require('./backend/routes/api.js')(router);
@@ -28,6 +28,6 @@ app.get('*', function(req, res) {
 
 
 
-app.listen(5000, function(){ //listen on port 5000 and handle requests on it.
-	console.log('Serveur actif sur port 5000');
+app.listen(8080, function(){ //listen on port 5000 and handle requests on it.
+	console.log('Serveur actif sur port 8080');
 });

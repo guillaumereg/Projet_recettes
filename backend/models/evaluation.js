@@ -14,7 +14,7 @@ var EvaluationSchema = new mongoose.Schema({
   	type: String,
   	unique: false
   },
-  auteur: {
+  author: {
   	type: String,
   	unique: false
   }

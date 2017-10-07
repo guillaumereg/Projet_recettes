@@ -3,7 +3,7 @@ angular.module('appRoutes', ['ngRoute'])      //ng route to create route
     .config(function($routeProvider, $locationProvider) {  //location.path pour changer ou href
         $routeProvider
 
-            .when('/', {  //= default location
+            .when('/Login', {  //= default location
                 templateUrl: 'views/login.html',
                 isLogin: true  //ne requiert pas de login pour y accéder
             })
