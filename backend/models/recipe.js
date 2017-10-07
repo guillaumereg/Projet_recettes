@@ -26,6 +26,11 @@ var RecipeSchema = new mongoose.Schema({
     type: Boolean,
     unique: false
   },
+  favori: {
+    type: Boolean,
+    unique: false
+  },
+
 });
 
 
