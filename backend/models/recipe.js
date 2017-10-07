@@ -10,6 +10,14 @@ var RecipeSchema = new mongoose.Schema({
     type: String,
     unique: false
   },
+  type {
+    type: String,
+    unique: false
+  },
+  sous_Type: {
+    type: String,
+    unique: false
+  },
   ingredient: {
     type: String,
     unique: false
