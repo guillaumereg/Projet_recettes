@@ -10,7 +10,7 @@ var RecipeSchema = new mongoose.Schema({
     type: String,
     unique: false
   },
-  type {
+  type: {
     type: String,
     unique: false
   },
