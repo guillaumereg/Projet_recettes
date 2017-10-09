@@ -1,4 +1,4 @@
-angular.module('registerCtrl', ['userServices']) //utiliser module userServices entre [] de app.js
+angular.module('registerController', ['userServices']) //utiliser module userServices entre [] de app.js
 //ajouter nouveau module crée (userControllers) entre [] de app.js pour pouvoir l'utiliser dans d'autres modules
     .controller('regCtrl', function($location, User,$route, $scope) {   //add factory User !!!! pour utiliser ce factory du module  userservices
 

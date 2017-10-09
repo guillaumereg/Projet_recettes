@@ -14,6 +14,22 @@ angular.module('appRoutes', ['ngRoute'])      //ng route to create route
                 isLogin: true
             })
 
+            .when('/home', {
+              templateUrl: 'views/home.html'
+            })
+
+            .when('/myProfil', {
+                templateUrl: 'views/myProfil.html' ,
+                controller: 'myProfilCtrl'
+
+            })
+
+            .when('/changeProfil', {
+              templateUrl: 'views/changeProfil.html' ,
+              controller: 'changeProfilCtrl'
+
+          })
+
             .otherwise({
                 templateUrl: 'views/unknown.html'
             });

@@ -1,0 +1,25 @@
+<div class= "page-header">
+	<h1 style="color: white;"> Informations Of {{username}} </h1>
+</div>
+	<div style="background-color: white; padding: 0px 25px 25px 25px;">
+			<form ng-submit="saveChange()">
+				<br>
+				<p ng-show="changeError" style= "text-align: center; background-color: red ; color:white;"> {{changeMessage}} </p>
+				<br>
+
+				<label>Age : </label>
+				<input class="form-control" style="width: 300px" name="age" type="text" ng-model="age">
+				<br>
+
+				<label>Numéro de téléphone : </label>
+				<input class="form-control" style="width: 300px" name="phoneNumber" type="text"  ng-model="phoneNumber">
+				<br>
+
+				<label>E-mail: </label>
+				<input class="form-control" style="width: 300px" name="e_mail" type="text" ng-model="e_mail">
+				<br>
+
+				<button  class= "btn btn-primary" type= "submit"> Save change </button>
+				<button  class= "btn btn-danger" ng-click="annulation()" type= "button"> Cancel </button>
+			</form>
+	</div>

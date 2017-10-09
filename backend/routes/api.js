@@ -13,7 +13,7 @@ module.exports = function(router) {
          || req.body.age == null || req.body.age == ''
          || req.body.phoneNumber == null|| req.body.phoneNumber == ''
          || req.body.e_mail == null || req.body.e_mail == '') {
-            res.json({ success: false, message: 'form is not complete' });
+            res.json({ success: false, message: 'Forme non complète' });
         }
         else {
             var user = new User();
@@ -26,11 +26,57 @@ module.exports = function(router) {
                 if (err) {
                     res.json({ success: false, message: 'Cet identifiant existe déja ou faute de format d entrée' });
                 } else {
-                    res.json({ success: true, message: 'user created!' }); //utilisateur a été sauvé, renvoyer réponse
+                    res.json({ success: true, message: 'Utilisateur créé' }); //utilisateur a été sauvé, renvoyer réponse
                 }
             });
         }
     });
+
+    router.post('/getProfile', function(req, res) { //retourne les details d'un profil
+        User.findOne({ username: req.body.username})
+        .select('username age phoneNumber e_mail').exec(function(err,user){
+            if(err){
+                throw err;
+            }
+            if(!user){
+                res.json({success: false, message: 'Utilisateur non trouvé' });
+            }
+            else if(user){            //= mot de passe soumis
+                res.json({ success: true, message: 'utilisateur trouvé, envoi des infos' , user: user});
+            }
+        });
+    });
+
+     router.post('/changeProfile', function(req, res) { //change les details d'un profil
+         if (req.body.age == null || req.body.age == ''
+                || req.body.phoneNumber == null|| req.body.phoneNumber == ''
+                || req.body.e_mail== null || req.body.e_mail == ''){
+                   res.json({ success: false, message: 'Données manquantes' });
+         }
+         else{
+           User.findOne({ username: req.body.username})
+           .select().exec(function(err,user){
+               if(err){
+                   throw err;
+               }
+               if(!user){
+                   res.json({success: false, message: 'Utilisateur non trouvé' });
+               }
+               else if(user){            //= mot de passe soumis
+                 user.age=req.body.age;
+                 user.phoneNumber=req.body.phoneNumber;
+                 user.e_mail=req.body.e_mail;
+                 user.save(function(err) { //sauver dans la base de données
+                     if (err) {
+                         res.json({ success: false, message: 'Erreur de format' });
+                     } else {
+                         res.json({ success: true, message:  'Modifications enregistrées' }); //utilisateur a été sauvé, renvoyer réponse
+                    }
+                 });
+               }
+             });
+           }
+         });
 
 
 
