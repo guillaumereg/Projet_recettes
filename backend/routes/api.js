@@ -7,6 +7,7 @@ var secret = 'valarmorghulis';
 
 // Export routes to the main server.js file
 module.exports = function(router) {
+
     router.post('/profile', function(req, res) { //enregistrer un profil
         if (req.body.username == null || req.body.username == ''
          || req.body.password == null || req.body.password == ''
@@ -42,7 +43,7 @@ module.exports = function(router) {
                 res.json({success: false, message: 'Utilisateur non trouvé' });
             }
             else if(user){            //= mot de passe soumis
-                res.json({ success: true, message: 'utilisateur trouvé, envoi des infos' , user: user});
+                res.json({ success: true, message: 'Utilisateur trouvé, envoi des informations' , user: user});
             }
         });
     });
@@ -82,7 +83,7 @@ module.exports = function(router) {
 
     router.post('/login', function(req, res) { //login d'un utilisateur
         if (req.body.username == null || req.body.username == '' || req.body.password == null || req.body.password == ''){
-            res.json({ success: false, message: 'Form is not completed' });
+            res.json({ success: false, message: 'Forme non complète' });
         }
         else{                                                   //attributs qu'on veut avoir dans variable user
             User.findOne({ username: req.body.username}).select('username hash salt age phoneNumber e_mail').exec(function(err,user){
@@ -90,7 +91,7 @@ module.exports = function(router) {
                     throw err;
                 }
                 if(!user){
-                    res.json({success: false, message: 'Account does not exist' });
+                    res.json({success: false, message: 'Le compte n existe pas' });
                 }
                 else if(user){            //= mot de passe soumis
                     if(user.checkPassword(req.body.password)){  //user est connecté
@@ -99,9 +100,12 @@ module.exports = function(router) {
                         res.json({ success: true, message: 'user loggs in' , token: token});
                     }
                     else{
-                        res.json({ success: false, message: 'Wrong password'});
-                        }
-    }})}});
+                        res.json({ success: false, message: 'Mauvais mot de passe'});
+                    }
+                  }
+              })
+          }
+      });
 
     router.use(function(req, res, next){ //middleware pour /getInfo
         var token = req.body.token || req.body.query || req.headers['x-access-token']; //récuperer le token de la requete
