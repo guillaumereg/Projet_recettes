@@ -2,8 +2,8 @@ var mongoose = require( 'mongoose' );
 var Schema = mongoose.Schema;
 
 var RecipeSchema = new mongoose.Schema({
-  recipeName: {
-    type: String,
+  recipeID: {
+    type: Number,
     unique: true
   },
   recipeTitle: {
