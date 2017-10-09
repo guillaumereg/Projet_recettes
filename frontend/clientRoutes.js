@@ -28,7 +28,13 @@ angular.module('appRoutes', ['ngRoute'])      //ng route to create route
               templateUrl: 'views/changeProfil.html' ,
               controller: 'changeProfilCtrl'
 
-          })
+            })
+
+          .when('/catalogue', {
+            templateUrl: 'views/catalogue.html' ,
+            controller: 'catalogueCtrl'
+
+            })
 
             .otherwise({
                 templateUrl: 'views/unknown.html'

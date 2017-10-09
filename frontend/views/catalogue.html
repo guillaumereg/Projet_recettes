@@ -1,0 +1,237 @@
+<div class= "page-header">
+	<h1 style="color: white;"> </h1>
+
+
+<!-- Affichage des types de plats -->
+
+  <div class"type" ng-show="showType">
+
+      <td>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="Accompagnement()" type="button" > Accompagnements </button>
+      </td>
+
+      <td>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="Apperitif()" type="button" > Appéritifs </button>
+      </td>
+      <td>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="Entree()" type="button" > Entrées </button>
+      </td>
+      <td>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="PlatComplet()" type="button" > Plat complets </button>
+      </td>
+      <td>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="Dessert()" type="button" > Desserts </button>
+      </td>
+
+
+  </div>
+<!-- Affichage des sous_types-->
+
+                <!-- Affichage sous_types de Accompagnement-->
+
+                <div class="Accompagnement" ng-show="showAccompagnement">
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="SauceFroide()" type="button" > Sauces froides </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="SauceChaude()" type="button" > Sauces chaudes </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Feculent()" type="button" > Féculents </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Legume()" type="button" > Légumes </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
+                  </td>
+                </div>
+
+                <!-- Affichage sous_types de Apperitif-->
+
+                <div class="Apperitif" ng-show="showApperitif">
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="ApperitifFroid()" type="button" > Appéritifs froids </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="ApperitifChaud()" type="button" > Appéritifs chauds </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
+                  </td>
+                </div>
+
+                <!-- Affichage sous_types de Entree -->
+
+                <div class="Entree" ng-show="showEntree">
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="EntreeFroide()" type="button" > Entrées froides </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="EntreeChaude()" type="button" > Entrées chaudes </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
+                  </td>
+                </div>
+
+                <!-- Affichage sous_types de PlatComplet-->
+
+                <div class="PlatComplet" ng-show="showPlatComplet">
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Viande()" type="button" > Plats de viande </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Poisson()" type="button" > Plats de poissons </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Vegetarien()" type="button" > Plats végétariens </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
+                  </td>
+                </div>
+
+                <!-- Affichage sous_types de Dessert-->
+
+                <div class="Dessert" ng-show="showDessert">
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Gateau()" type="button" > Gâteaux </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Tarte()" type="button" > Tartes </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Patisserie()" type="button" > Pâtisseries </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Glace()" type="button" > Desserts glacés </button>
+                  </td>
+                  <td>
+                     <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
+                  </td>
+                </div>
+
+<!-- Affichage des plats affiliés aux sous_types-->
+
+                              <!-- Affichage des plats affiliés à sous_type SauceFroide-->
+                              <div class="SauceFroide" ng-show="showSauceFroide">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Accompagnement()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                              <!-- Affichage des plats affiliés à sous_type SauceChaude-->
+
+                              <div class="SauceChaude" ng-show="showSauceChaude">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Accompagnement()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                              <!-- Affichage des plats affiliés à sous_type Feculent-->
+
+                              <div class="Feculent" ng-show="showFeculent">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Accompagnement()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                              <!-- Affichage des plats affiliés à sous_type Legume-->
+
+                              <div class="Legume" ng-show="showLegume">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Accompagnement()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type ApperitifFroid-->
+
+                              <div class="ApperitifFroid" ng-show="showApperitifFroid">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Apperitif()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type ApperitifChaud-->
+
+                              <div class="ApperitifChaud" ng-show="showApperitifChaud">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Apperitif()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type EntreeFroide-->
+
+                              <div class="EntreeFroide" ng-show="showEntreeFroide">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Entree()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type EntreeChaude-->
+
+                              <div class="EntreeChaude" ng-show="showEntreeChaude">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Entree()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type Viande-->
+
+                              <div class="Viande" ng-show="showViande">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="PlatComplet()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type Poisson-->
+
+                              <div class="Poisson" ng-show="showPoisson">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="PlatComplet()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type Vegetarien-->
+
+                              <div class="Vegetarien" ng-show="showVegetarien">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="PlatComplet()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type Gateau-->
+
+                              <div class="Gateau" ng-show="showGateau">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Dessert()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type Tarte-->
+
+                              <div class="Tarte" ng-show="showTarte">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Dessert()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type Patisserie-->
+
+                              <div class="Patisserie" ng-show="showPatisserie">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Dessert()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+                                <!-- Affichage des plats affiliés à sous_type Glace-->
+
+                              <div class="Glace" ng-show="showGlace">
+                                <td>
+                                   <button class= "btn btn-primary" style="width: 100px" ng-click="Dessert()" type="button" > Retour </button>
+                                </td>
+                              </div>
+
+
+</div>

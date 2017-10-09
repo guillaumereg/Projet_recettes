@@ -19,6 +19,7 @@
     <script src="controllers/mainCtrl.js"> </script>
     <script src="controllers/myProfilCtrl.js"> </script>
     <script src="controllers/changeProfilCtrl.js"> </script>
+    <script src="controllers/catalogueCtrl.js"> </script>
     <script src="services/userServices.js"> </script>
     <script src="services/authServices.js"> </script>
     <script src="services/recipeServices.js"> </script>
@@ -43,6 +44,7 @@
           <ul class="nav navbar-nav">
             <li ng-show = "main.loggedIn"><a href="/home">Accueil</a></li>
             <li ng-show = "main.loggedIn"><a href="/myProfil">Mon profil</a></li>
+            <li ng-show = "main.loggedIn"><a href="/catalogue">Catalogue</a></li>
             <li ng-show = "main.loggedIn" ng-click = "main.logout();" ><a href="#">Logout</a></li>
             <li ng-show = "!main.loggedIn"><a href="/">Login</a></li>
             <li ng-show = "!main.loggedIn"><a href="/register">Register</a></li>
