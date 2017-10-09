@@ -7,20 +7,20 @@
   <div class"type" ng-show="showType">
 
       <td>
-         <button class= "btn btn-primary" style="width: 1000px" ng-click="Accompagnement()" type="button" > Accompagnements </button>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="Accompagnement()" type="button" > Accompagnement </button>
       </td>
 
       <td>
-         <button class= "btn btn-primary" style="width: 1000px" ng-click="Apperitif()" type="button" > Appéritifs </button>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="Apperitif()" type="button" > Apéritif </button>
       </td>
       <td>
-         <button class= "btn btn-primary" style="width: 1000px" ng-click="Entree()" type="button" > Entrées </button>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="Entree()" type="button" > Entrée </button>
       </td>
       <td>
-         <button class= "btn btn-primary" style="width: 1000px" ng-click="PlatComplet()" type="button" > Plat complets </button>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="PlatComplet()" type="button" > Plat complet </button>
       </td>
       <td>
-         <button class= "btn btn-primary" style="width: 1000px" ng-click="Dessert()" type="button" > Desserts </button>
+         <button class= "btn btn-primary" style="width: 1000px" ng-click="Dessert()" type="button" > Dessert </button>
       </td>
 
 
@@ -31,16 +31,16 @@
 
                 <div class="Accompagnement" ng-show="showAccompagnement">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="SauceFroide()" type="button" > Sauces froides </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="SauceFroide()" ng-click="Plats()" type="button" > Sauce froide </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="SauceChaude()" type="button" > Sauces chaudes </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="SauceChaude()" ng-click="Plats()" type="button" > Sauce chaude </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Feculent()" type="button" > Féculents </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Feculent()" ng-click="Plats()" type="button" > Féculent </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Legume()" type="button" > Légumes </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Legume()" ng-click="Plats()" type="button" > Légume </button>
                   </td>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
@@ -51,10 +51,10 @@
 
                 <div class="Apperitif" ng-show="showApperitif">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="ApperitifFroid()" type="button" > Appéritifs froids </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="ApperitifFroid()" ng-click="Plats()" type="button" > Apéritif froid </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="ApperitifChaud()" type="button" > Appéritifs chauds </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="ApperitifChaud()" ng-click="Plats()" type="button" > Appéritif chaud </button>
                   </td>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
@@ -65,10 +65,10 @@
 
                 <div class="Entree" ng-show="showEntree">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="EntreeFroide()" type="button" > Entrées froides </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="EntreeFroide()" ng-click="Plats()" type="button" > Entrée froide </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="EntreeChaude()" type="button" > Entrées chaudes </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="EntreeChaude()" ng-click="Plats()" type="button" > Entrée chaude </button>
                   </td>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
@@ -79,13 +79,13 @@
 
                 <div class="PlatComplet" ng-show="showPlatComplet">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Viande()" type="button" > Plats de viande </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Viande()" ng-click="Plats()" type="button" > Plat de viande </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Poisson()" type="button" > Plats de poissons </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Poisson()" ng-click="Plats()" type="button" > Plat de poisson </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Vegetarien()" type="button" > Plats végétariens </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Vegetarien()" ng-click="Plats()" type="button" > Plat végétarien </button>
                   </td>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
@@ -96,16 +96,16 @@
 
                 <div class="Dessert" ng-show="showDessert">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Gateau()" type="button" > Gâteaux </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Gateau()" ng-click="Plats()" type="button" > Gâteau </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Tarte()" type="button" > Tartes </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Tarte()" ng-click="Plats()" type="button" > Tarte </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Patisserie()" type="button" > Pâtisseries </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Patisserie()" ng-click="Plats()" type="button" > Pâtisserie </button>
                   </td>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Glace()" type="button" > Desserts glacés </button>
+                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Glace()" ng-click="Plats()" type="button" > Dessert glacé </button>
                   </td>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
@@ -232,6 +232,24 @@
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Dessert()" type="button" > Retour </button>
                                 </td>
                               </div>
+
+<!-- Affichage des plats -->
+		<div class="Plats" ng-show="showPlats">
+				<table  class="table" style="margin-top : 50px;" >
+					<tr>
+						<td> <strong> Titre </strong> </td>
+						<td> <strong> Type </strong> </td>
+						<td> <strong> Sous_type </strong> </td>
+						<td> <strong> Auteur </strong> </td>
+					</tr>
+					<tr ng-repeat="recipe in recipes">
+						<td>{{recipe.recipeTitle}</td>
+						<td>{{recipe.type}}</td>
+						<td>{{recipe.sous_Type}}</td>
+						<td>{{recipe.author}</td>
+					</tr>
+				</table>
+			</div>
 
 
 </div>

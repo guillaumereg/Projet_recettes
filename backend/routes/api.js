@@ -131,6 +131,20 @@ module.exports = function(router) {
 
 
 
+    router.post('/getRecipeBySousType', function(req, res) { //retourne les details d'un profil
+        Recipe.find({ sous_Type: req.body.sous_Type})
+        .select('recipeTitle type sous_Type author').exec(function(err,recipes){
+            if(err){
+                throw err;
+            }
+            else {            //= mot de passe soumis
+                res.json({ success: true, message: 'Recette trouvée, envoi des informations' , recipes: recipes});
+            }
+        });
+    });
+
+
+
 
     return router; // Retourne le router vers le serveur
 }
