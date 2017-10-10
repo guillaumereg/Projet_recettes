@@ -133,7 +133,7 @@ module.exports = function(router) {
 
     router.post('/getRecipeBySousType', function(req, res) { //retourne les details d'un profil
         Recipe.find({ sous_Type: req.body.sous_Type})
-        .select('recipeTitle type sous_Type author').exec(function(err,recipes){
+        .select('recipeTitle author').exec(function(err,recipes){
             if(err){
                 throw err;
             }

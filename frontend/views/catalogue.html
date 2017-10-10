@@ -6,21 +6,38 @@
 
   <div class"type" ng-show="showType">
 
+			<style type="text/css">
+					.btnPersonnel {
+							background-color:white;
+    					font-size: 80px;
+							width: 100%;
+							border-radius: 12px;
+    					text-align: left;
+    					display: inline-block;
+				}
+			</style>
       <td>
-         <button class= "btn btn-primary" style="width: 1000px" ng-click="Accompagnement()" type="button" > Accompagnement </button>
+         <button class= "btnPersonnel" ng-click="Accompagnement()" type="button" > Accompagnement </button>
       </td>
-
+			<br>
+			<br>
       <td>
-         <button class= "btn btn-primary" style="background:url(nourriture.png); width: 1000px;" ng-click="Apperitif()" type="button" > Apéritif </button>
+         <button class= "btnPersonnel" ng-click="Apperitif()" type="button" > Apéritif </button>
       </td>
+			<br>
+			<br>
       <td>
-         <button class= "btn btn-primary" style="width: 1000px" ng-click="Entree()" type="button" > Entrée </button>
+         <button class= "btnPersonnel"  ng-click="Entree()" type="button" > Entrée </button>
       </td>
+			<br>
+			<br>
       <td>
-         <button class= "btn btn-primary" style="width: 1000px" ng-click="PlatComplet()" type="button" > Plat complet </button>
+         <button class= "btnPersonnel"  ng-click="PlatComplet()" type="button" > Plat complet </button>
       </td>
+			<br>
+			<br>
       <td>
-         <button class= "btn btn-primary" style="width: 1000px" ng-click="Dessert()" type="button" > Dessert </button>
+         <button class= "btnPersonnel" ng-click="Dessert()" type="button" > Dessert </button>
       </td>
 
 
@@ -31,17 +48,25 @@
 
                 <div class="Accompagnement" ng-show="showAccompagnement">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="SauceFroide()" ng-click="Plats()" type="button" > Sauce froide </button>
+                     <button class= "btnPersonnel" ng-click="SauceFroide()" ng-click="Plats()" type="button" > Sauce froide </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="SauceChaude()" ng-click="Plats()" type="button" > Sauce chaude </button>
+                     <button class= "btnPersonnel"  ng-click="SauceChaude()" ng-click="Plats()" type="button" > Sauce chaude </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Feculent()" ng-click="Plats()" type="button" > Féculent </button>
+                     <button class= "btnPersonnel"  ng-click="Feculent()" ng-click="Plats()" type="button" > Féculent </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Legume()" ng-click="Plats()" type="button" > Légume </button>
+                     <button class= "btnPersonnel"  ng-click="Legume()" ng-click="Plats()" type="button" > Légume </button>
                   </td>
+									<br>
+									<br>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
                   </td>
@@ -51,11 +76,15 @@
 
                 <div class="Apperitif" ng-show="showApperitif">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="ApperitifFroid()" ng-click="Plats()" type="button" > Apéritif froid </button>
+                     <button class= "btnPersonnel"  ng-click="ApperitifFroid()" ng-click="Plats()" type="button" > Apéritif froid </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="ApperitifChaud()" ng-click="Plats()" type="button" > Apéritif chaud </button>
+                     <button class= "btnPersonnel" ng-click="ApperitifChaud()" ng-click="Plats()" type="button" > Apéritif chaud </button>
                   </td>
+									<br>
+									<br>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
                   </td>
@@ -65,11 +94,15 @@
 
                 <div class="Entree" ng-show="showEntree">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="EntreeFroide()" ng-click="Plats()" type="button" > Entrée froide </button>
+                     <button class= "btnPersonnel" ng-click="EntreeFroide()" ng-click="Plats()" type="button" > Entrée froide </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="EntreeChaude()" ng-click="Plats()" type="button" > Entrée chaude </button>
+                     <button class= "btnPersonnel" ng-click="EntreeChaude()" ng-click="Plats()" type="button" > Entrée chaude </button>
                   </td>
+									<br>
+									<br>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
                   </td>
@@ -79,14 +112,20 @@
 
                 <div class="PlatComplet" ng-show="showPlatComplet">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Viande()" ng-click="Plats()" type="button" > Plat de viande </button>
+                     <button class= "btnPersonnel" ng-click="Viande()" ng-click="Plats()" type="button" > Plat de viande </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Poisson()" ng-click="Plats()" type="button" > Plat de poisson </button>
+                     <button class= "btnPersonnel" ng-click="Poisson()" ng-click="Plats()" type="button" > Plat de poisson </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Vegetarien()" ng-click="Plats()" type="button" > Plat végétarien </button>
+                     <button class= "btnPersonnel" ng-click="Vegetarien()" ng-click="Plats()" type="button" > Plat végétarien </button>
                   </td>
+									<br>
+									<br>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
                   </td>
@@ -96,17 +135,25 @@
 
                 <div class="Dessert" ng-show="showDessert">
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Gateau()" ng-click="Plats()" type="button" > Gâteau </button>
+                     <button class= "btnPersonnel"  ng-click="Gateau()" ng-click="Plats()" type="button" > Gâteau </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Tarte()" ng-click="Plats()" type="button" > Tarte </button>
+                     <button class= "btnPersonnel"  ng-click="Tarte()" ng-click="Plats()" type="button" > Tarte </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Patisserie()" ng-click="Plats()" type="button" > Pâtisserie </button>
+                     <button class= "btnPersonnel"  ng-click="Patisserie()" ng-click="Plats()" type="button" > Pâtisserie </button>
                   </td>
+									<br>
+									<br>
                   <td>
-                     <button class= "btn btn-primary" style="width: 1000px" ng-click="Glace()" ng-click="Plats()" type="button" > Dessert glacé </button>
+                     <button class= "btnPersonnel"  ng-click="Glace()" ng-click="Plats()" type="button" > Dessert glacé </button>
                   </td>
+									<br>
+									<br>
                   <td>
                      <button class= "btn btn-primary" style="width: 100px" ng-click="retourType()" type="button" > Retour </button>
                   </td>
@@ -116,6 +163,9 @@
 
                               <!-- Affichage des plats affiliés à sous_type SauceFroide-->
                               <div class="SauceFroide" ng-show="showSauceFroide">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les sauces froides
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Accompagnement()" type="button" > Retour </button>
                                 </td>
@@ -124,6 +174,9 @@
                               <!-- Affichage des plats affiliés à sous_type SauceChaude-->
 
                               <div class="SauceChaude" ng-show="showSauceChaude">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les sauces chaudes
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Accompagnement()" type="button" > Retour </button>
                                 </td>
@@ -132,6 +185,9 @@
                               <!-- Affichage des plats affiliés à sous_type Feculent-->
 
                               <div class="Feculent" ng-show="showFeculent">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les féculents
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Accompagnement()" type="button" > Retour </button>
                                 </td>
@@ -140,6 +196,9 @@
                               <!-- Affichage des plats affiliés à sous_type Legume-->
 
                               <div class="Legume" ng-show="showLegume">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les légumes
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Accompagnement()" type="button" > Retour </button>
                                 </td>
@@ -148,6 +207,9 @@
                                 <!-- Affichage des plats affiliés à sous_type ApperitifFroid-->
 
                               <div class="ApperitifFroid" ng-show="showApperitifFroid">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les apéritifs froids
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Apperitif()" type="button" > Retour </button>
                                 </td>
@@ -156,6 +218,9 @@
                                 <!-- Affichage des plats affiliés à sous_type ApperitifChaud-->
 
                               <div class="ApperitifChaud" ng-show="showApperitifChaud">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les apéritifs chauds
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Apperitif()" type="button" > Retour </button>
                                 </td>
@@ -164,6 +229,9 @@
                                 <!-- Affichage des plats affiliés à sous_type EntreeFroide-->
 
                               <div class="EntreeFroide" ng-show="showEntreeFroide">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les entrées froides
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Entree()" type="button" > Retour </button>
                                 </td>
@@ -172,6 +240,9 @@
                                 <!-- Affichage des plats affiliés à sous_type EntreeChaude-->
 
                               <div class="EntreeChaude" ng-show="showEntreeChaude">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les entrées chaudes
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Entree()" type="button" > Retour </button>
                                 </td>
@@ -180,6 +251,9 @@
                                 <!-- Affichage des plats affiliés à sous_type Viande-->
 
                               <div class="Viande" ng-show="showViande">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les plats de viande
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="PlatComplet()" type="button" > Retour </button>
                                 </td>
@@ -188,6 +262,9 @@
                                 <!-- Affichage des plats affiliés à sous_type Poisson-->
 
                               <div class="Poisson" ng-show="showPoisson">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les plats de poisson
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="PlatComplet()" type="button" > Retour </button>
                                 </td>
@@ -196,6 +273,9 @@
                                 <!-- Affichage des plats affiliés à sous_type Vegetarien-->
 
                               <div class="Vegetarien" ng-show="showVegetarien">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les plats végétariens
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="PlatComplet()" type="button" > Retour </button>
                                 </td>
@@ -204,6 +284,9 @@
                                 <!-- Affichage des plats affiliés à sous_type Gateau-->
 
                               <div class="Gateau" ng-show="showGateau">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les gâteaux
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Dessert()" type="button" > Retour </button>
                                 </td>
@@ -212,6 +295,9 @@
                                 <!-- Affichage des plats affiliés à sous_type Tarte-->
 
                               <div class="Tarte" ng-show="showTarte">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les tartes
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Dessert()" type="button" > Retour </button>
                                 </td>
@@ -220,6 +306,9 @@
                                 <!-- Affichage des plats affiliés à sous_type Patisserie-->
 
                               <div class="Patisserie" ng-show="showPatisserie">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les patisseries
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Dessert()" type="button" > Retour </button>
                                 </td>
@@ -228,6 +317,9 @@
                                 <!-- Affichage des plats affiliés à sous_type Glace-->
 
                               <div class="Glace" ng-show="showGlace">
+																<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif ; text-align: center; margin-top: 10px; margin-bottom: 10px; ">
+																	 Les desserts glacés
+																</p>
                                 <td>
                                    <button class= "btn btn-primary" style="width: 100px" ng-click="Dessert()" type="button" > Retour </button>
                                 </td>
@@ -238,14 +330,10 @@
 				<table  class="table" style="margin-top : 50px;" >
 					<tr>
 						<td> <strong> Titre </strong> </td>
-						<td> <strong> Type </strong> </td>
-						<td> <strong> Sous_type </strong> </td>
 						<td> <strong> Auteur </strong> </td>
 					</tr>
 					<tr ng-repeat="recipe in recipes">
 						<td>{{recipe.recipeTitle}</td>
-						<td>{{recipe.type}}</td>
-						<td>{{recipe.sous_Type}}</td>
 						<td>{{recipe.author}</td>
 					</tr>
 				</table>
