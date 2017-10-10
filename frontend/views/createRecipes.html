@@ -1,0 +1,23 @@
+<center>
+	<div class= "page-header">
+		<h1 style="color: white;"> Création d'une recette </h1>
+	</div>
+	<div style="background-color: white;padding: 25px 25px 25px 25px;margin-bottom: 50px">
+
+	<form ng-submit="creRecipes()">
+		<p ng-show="showErrorMessage" style= "background-color: red ; color:white"> {{errorMessage}} </p>
+		<label>Titre: </label>
+		<input class="form-control" style="width: 300px" name="titre" type="text" ng-model="regData.username">
+		<br>
+		<label>Type: </label>
+		<input class="form-control" style="width: 300px" name="type" type="password" ng-model="regData.password">
+		<br>
+		<label>Sous_Type: </label>
+		<input class="form-control" style="width: 300px" name="soustype" type="text"  ng-model="regData.age">
+		<br>
+		<button class= "btn btn-primary" type= "submit" style="margin-bottom : 50px"> Enregistrer </button>
+		<br>
+		<button  class= "btn btn-danger" ng-click="annulation()" type= "button"> Annuler </button>
+	</form>
+</div>
+</center>

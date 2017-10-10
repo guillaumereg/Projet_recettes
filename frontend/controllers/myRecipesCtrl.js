@@ -6,4 +6,8 @@ angular.module('myRecipesController', ['authServices','userServices','recipeServ
         $location.path('/myProfil');
     }
 
+    $scope.createRecipes = function() {
+        $location.path('/createRecipes');
+    }
+
   });

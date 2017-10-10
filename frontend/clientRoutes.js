@@ -30,9 +30,9 @@ angular.module('appRoutes', ['ngRoute'])      //ng route to create route
 
             })
 
-          .when('/catalogue', {
-            templateUrl: 'views/catalogue.html' ,
-            controller: 'catalogueCtrl'
+            .when('/catalogue', {
+              templateUrl: 'views/catalogue.html' ,
+              controller: 'catalogueCtrl'
 
             })
 
@@ -40,7 +40,13 @@ angular.module('appRoutes', ['ngRoute'])      //ng route to create route
               templateUrl: 'views/myRecipes.html' ,
               controller: 'myRecipesCtrl'
 
-              })
+            })
+
+            .when('/createRecipes', {
+              templateUrl: 'views/createRecipes.html' ,
+              controller: 'createRecipesCtrl'
+
+            })
 
             .otherwise({
                 templateUrl: 'views/unknown.html'
