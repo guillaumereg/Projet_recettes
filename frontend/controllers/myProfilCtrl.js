@@ -18,5 +18,9 @@ angular.module('myProfilController', ['authServices','userServices']) //utiliser
         $location.path('/changeProfil');
     }
 
+    $scope.myRecipes = function(user) {
+        $location.path('/myRecipes');
+    }
+
 
   });

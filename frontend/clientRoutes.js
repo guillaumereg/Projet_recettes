@@ -36,6 +36,12 @@ angular.module('appRoutes', ['ngRoute'])      //ng route to create route
 
             })
 
+            .when('/myRecipes', {
+              templateUrl: 'views/myRecipes.html' ,
+              controller: 'myRecipesCtrl'
+
+              })
+
             .otherwise({
                 templateUrl: 'views/unknown.html'
             });
