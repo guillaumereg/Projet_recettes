@@ -9,6 +9,7 @@ var router = express.Router();
 var User= require('./backend/models/user.js');
 var Recipe = require('./backend/models/recipe.js');
 var Evaluation = require('./backend/models/evaluation.js');
+var userRecetteFavori = require('./backend/models/userRecetteFavori.js');
 
 var appRoutes = require('./backend/routes/api.js')(router);
 

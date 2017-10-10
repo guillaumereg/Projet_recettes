@@ -2,13 +2,10 @@ var mongoose = require( 'mongoose' );
 var Schema = mongoose.Schema;
 
 var RecipeSchema = new mongoose.Schema({
-  recipeID: {
-    type: Number,
-    unique: true
-  },
+
   recipeTitle: {
     type: String,
-    unique: false
+    unique: true
   },
   type: {
     type: String,
@@ -31,10 +28,6 @@ var RecipeSchema = new mongoose.Schema({
     unique: false
   },
   public: {
-    type: Boolean,
-    unique: false
-  },
-  favori: {
     type: Boolean,
     unique: false
   },
