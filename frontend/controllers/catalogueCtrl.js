@@ -1,6 +1,6 @@
-angular.module('catalogueController', ['authServices','userServices','recipeServices']) //utiliser module userServices entre [] de app.js
+angular.module('catalogueController', ['authServices','userServices','recipeServices','userRecipeServices']) //utiliser module userServices entre [] de app.js
 //ajouter nouveau module crée (userControllers) entre [] de app.js pour pouvoir l'utiliser dans d'autres modules
-  .controller('catalogueCtrl', function($location, User, Recipe, Auth, $route, $scope) {   //add factory User !!!! pour utiliser ce factory du module  userservices
+  .controller('catalogueCtrl', function($location, User, UserRecipe, Recipe, Auth, $route, $scope) {   //add factory User !!!! pour utiliser ce factory du module  userservices
 
 //tous les types et sous_types
       $scope.showType=true;
@@ -196,6 +196,18 @@ angular.module('catalogueController', ['authServices','userServices','recipeServ
           } else {
               console.log(data.data.message);
           }
+      });
+    }
+
+    $scope.favoriteRecipe = function(recipe) {
+      Auth.getUser().then(function(data){
+        var username = data.data.username;
+        UserRecipe.addFavori({username: data.data.username, recipeTitle: recipe.recipeTitle})
+                      .then(function(data){
+            if (!data.data.success) {  // rediriger vers la page de login en cas de succes
+                console.log(data.data.message);
+            }
+        });
       });
     }
 

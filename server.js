@@ -9,7 +9,7 @@ var router = express.Router();
 var User= require('./backend/models/user.js');
 var Recipe = require('./backend/models/recipe.js');
 var Evaluation = require('./backend/models/evaluation.js');
-var userRecetteFavori = require('./backend/models/userRecetteFavori.js');
+var UserRecipe = require('./backend/models/userRecetteFavori.js');
 
 var appRoutes = require('./backend/routes/api.js')(router);
 
@@ -29,6 +29,6 @@ app.get('*', function(req, res) {
 
 
 
-app.listen(8080, function(){ //listen on port 5000 and handle requests on it.
+app.listen(8080, function(){ //listen on port 8080 and handle requests on it.
 	console.log('Serveur actif sur port 8080');
 });

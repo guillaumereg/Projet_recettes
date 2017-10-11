@@ -157,6 +157,24 @@ module.exports = function(router) {
         });
     });
 
+    router.post('/addFavori', function(req, res) { //enregistrer une evaluation
+            if (req.body.username == null || req.body.username == ''
+             || req.body.recipeTitle == null || req.body.recipeTitle == '') {
+                res.json({ success: false, message: 'Bug' });
+            }
+            else {
+                var userRecipe = new UserRecipe();
+                userRecipe.username = req.body.username;
+                userRecipe.recipeTitle = req.body.recipeTitle;
+                userRecipe.save(function(err) { //sauver dans la base de données
+                    if (err) {
+                        res.json({ success: false, message: 'Error' });
+                    } else {
+                        res.json({ success: true, message: 'Ajout aux favoris' }); //utilisateur a été sauvé, renvoyer réponse
+                    }
+                });
+            }
+        });
 
 
 
