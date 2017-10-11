@@ -1,0 +1,32 @@
+<div class="page-header">
+		<h1 style="color: white;"> Rechercher une recette </h1>
+</div>
+	<div style="background-color: white;padding: 25px;width: 500px;border:1px solid #999999;">
+		<form ng-submit="findRecipes()">
+			<label>Auteur : </label>
+			<input class="form-control" style="width: 300px" name="author" type="text" ng-model="author">
+			<br>
+
+			<label>Titre : </label>
+			<input class="form-control" style="width: 300px" name="recipeTitle" type="text" ng-model="recipeTitle">
+			<br>
+
+			<label>Ingrédients : </label>
+			<input class="form-control" style="width: 300px" name="ingredient" type="text" ng-model="ingredient">
+			<br>
+
+			<button class= "btn btn-primary" type= "submit"> Search </button>
+		</form>
+	</div>
+  <p ng-show="showErrorMessage" style= "background-color: red ; color:white"> {{errorMessage}} </p>
+	<table ng-show="showResults" class="table" style="background-color: white;border:1px solid #999999;margin-top : 50px" >
+			<tr>
+				<td> <strong> Titre </strong> </td>
+				<td> <strong> Auteur </strong> </td>
+			</tr>
+
+			<tr ng-repeat="result in results">
+				<td>{{result.recipeTitle}}</td>
+				<td>{{result.author}}</td>
+			</tr>
+		</table>

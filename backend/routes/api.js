@@ -143,6 +143,20 @@ module.exports = function(router) {
         });
     });
 
+    router.post('/searchRecipe', function(req, res) {
+        console.log(req.body);
+        Recipe.find(req.body)
+        .select('recipeTitle author').exec(function(err,recipes){
+            if(err){
+                console.log(err);
+                res.json({ success: false, message: 'impossible de chercher des recettes' });
+            }
+            else{
+                res.json({ success: true, message: 'recettes trouvées' , recipes: recipes});
+            }
+        });
+    });
+
 
 
 
