@@ -10,11 +10,12 @@ angular.module('searchRecipeController', ['authServices','userServices','recipeS
             $scope.searchData = {author:'', recipeTitle:'', ingredient:''};
             $scope.findRecipes = function() {
                 $scope.results={};
-                if ($scope.author =="" && $scope.author ==undefined && $scope.recipeTitle =="" && $scope.recipeTitle ==undefined && $scope.ingredient =="" && $scope.ingredient ==undefined){
+                if (($scope.author =="" || $scope.author ==undefined) && ($scope.recipeTitle =="" || $scope.recipeTitle ==undefined) && ($scope.ingredient =="" || $scope.ingredient ==undefined)){
                   $scope.errorMessage = "Veuillez remplir au moins un champs de recherche";
                   $scope.showErrorMessage=true;
                 }
                 else{
+                  $scope.showErrorMessage=false;
                   if($scope.author !=="" && $scope.author !==undefined){
                       $scope.searchData.author = $scope.author.toLowerCase();
                   }
