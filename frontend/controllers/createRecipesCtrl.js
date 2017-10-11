@@ -12,4 +12,17 @@ angular.module('createRecipesController', ['authServices','userServices','recipe
 
     };
 
+    function Lien() {
+    	i = document.Choix.Liste.selectedIndex;
+    	if (i == 0) return;
+    	choix = document.Choix.Liste.options[i].value;
+    	parent.location.href = choix;
+    }
+
+    function Lien2() {
+    	i = document.Choix.Liste.selectedIndex;
+    	if (i == 0) return;
+    }
+
+
   });

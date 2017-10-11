@@ -7,17 +7,44 @@
 	<form ng-submit="creRecipes()">
 		<p ng-show="showErrorMessage" style= "background-color: red ; color:white"> {{errorMessage}} </p>
 		<label>Titre: </label>
-		<input class="form-control" style="width: 300px" name="titre" type="text" ng-model="regData.username">
+		<input class="form-control" style="width: 300px" name="titre">
 		<br>
 		<label>Type: </label>
-		<input class="form-control" style="width: 300px" name="type" type="password" ng-model="regData.password">
+
+
+		<FORM NAME="Choix">
+		<SELECT NAME="Liste" onChange="Lien()">
+		<OPTION VALUE="">Choisir une option
+		<OPTION VALUE="">Accompagnement
+		<OPTION VALUE="">Apéritif
+		<OPTION VALUE="">Entrée
+		<OPTION VALUE="">Plat
+		<OPTION VALUE="">Dessert
+		</SELECT>
+		</FORM>
+
+
 		<br>
 		<label>Sous_Type: </label>
-		<input class="form-control" style="width: 300px" name="soustype" type="text"  ng-model="regData.age">
+
+		<FORM NAME="Choix2">
+		<SELECT NAME="Liste2" onChange="Lien2()">
+		<OPTION VALUE="">Choisir une option
+		<OPTION VALUE="">Accompagnement
+		<OPTION VALUE="">Apéritif
+		<OPTION VALUE="">Entrée
+		<OPTION VALUE="">Plat
+		<OPTION VALUE="">Des
+		</SELECT>
+		</FORM>
+
 		<br>
 		<button class= "btn btn-primary" type= "submit" style="margin-bottom : 50px"> Enregistrer </button>
 		<br>
 		<button  class= "btn btn-danger" ng-click="annulation()" type= "button"> Annuler </button>
 	</form>
+
+
+
 </div>
 </center>
