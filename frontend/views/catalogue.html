@@ -325,6 +325,20 @@
                                 </td>
                               </div>
 
+
+<!-- Apparence du bouton pour ajouter un plat aux favoris -->
+							<style type="text/css">
+										.btnFavori{
+												background-color:"{{favorite.color}}";
+												font-size: 15px;
+											  border-radius: 12px;
+												text-align: left;
+												display: inline-block;
+											}
+								</style>
+
+
+
 <!-- Affichage des plats -->
 		<div class="Plats" ng-show="showPlats">
 				<table  class="table" style="margin-top : 50px; color:white; font-size: 15px;" >
@@ -337,7 +351,7 @@
 							<td>{{recipe.recipeTitle}</td>
 							<td>{{recipe.author}</td>
 							<td>
-						 		<button ng-click="favoriteRecipe(recipe)" type="button" class="btn btn-danger"></button>
+						 		<button ng-click="favoriteRecipe(recipe)" type="button" class="btnFavori"></button>
 							</td>
 					</tr>
 				</table>

@@ -22,5 +22,10 @@ angular.module('myProfilController', ['authServices','userServices']) //utiliser
         $location.path('/myRecipes');
     }
 
+    $scope.favorite = function(user) {
+        $location.path('/favoriteRecipe');
+    }
+
+
 
   });

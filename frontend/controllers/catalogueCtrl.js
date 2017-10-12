@@ -192,7 +192,24 @@ angular.module('catalogueController', ['authServices','userServices','recipeServ
       Recipe.getRecipeBySousType({sous_Type: typeActuel})
         .then(function(data){
           if (data.data.success) {
+              i=0;
               $scope.recipes = data.data.recipes;
+              while (data.data.recipes[i]!=null){
+
+                  UserRecipe.findOne({username: data.data.username, recipeTitle: recipe.recipeTitle})
+                  .select().exec(function(err,user){
+                      if(err){
+                          throw err;
+                      }
+                      if(!UserRecipe){
+                          $scope.favorite.color = "white";
+                      }
+                      else{            //= mot de passe soumis
+                          $scope.favorite.color= "red";
+                      }
+                  });
+                  i++;
+              }
           } else {
               console.log(data.data.message);
           }

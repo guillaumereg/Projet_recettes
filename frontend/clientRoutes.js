@@ -54,6 +54,12 @@ angular.module('appRoutes', ['ngRoute'])      //ng route to create route
 
             })
 
+            .when('/favoriteRecipe', {
+              templateUrl: 'views/myFavoriteRecipe.html' ,
+              controller: 'myFavoriteRecipeCtrl'
+
+            })
+
             .otherwise({
                 templateUrl: 'views/unknown.html'
             });
