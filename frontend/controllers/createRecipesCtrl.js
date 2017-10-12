@@ -12,17 +12,20 @@ angular.module('createRecipesController', ['authServices','userServices','recipe
 
     };
 
-    function Lien() {
-    	i = document.Choix.Liste.selectedIndex;
-    	if (i == 0) return;
-    	choix = document.Choix.Liste.options[i].value;
-    	parent.location.href = choix;
+    function Choix(form) {
+    i = form.Rubrique.selectedIndex;
+    if (i == 0) {
+      return;
+      }
+    switch (i) {
+    case 1 : var txt = new Array ('Sauce froide','Sauce chaude','Féculent'); break;
+    case 2 : var txt = new Array ('Apéritif froid','Apéritif chaud','lol'); break;
+    case 3 : var txt = new Array ('Entrée froide','Entrée chaude','lol'); break;
     }
-
-    function Lien2() {
-    	i = document.Choix.Liste.selectedIndex;
-    	if (i == 0) return;
+    form.Rubrique.selectedIndex = 0;
+    for (i=0;i<3;i++) {
+      form.Page.options[i+1].text=txt[i];
+      }
     }
-
 
   });

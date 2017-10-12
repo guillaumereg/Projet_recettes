@@ -9,34 +9,20 @@
 		<label>Titre: </label>
 		<input class="form-control" style="width: 300px" name="titre">
 		<br>
-		<label>Type: </label>
 
-
-		<FORM NAME="Choix">
-		<SELECT NAME="Liste" onChange="Lien()">
-		<OPTION VALUE="">Choisir une option
-		<OPTION VALUE="">Accompagnement
-		<OPTION VALUE="">Apéritif
-		<OPTION VALUE="">Entrée
-		<OPTION VALUE="">Plat
-		<OPTION VALUE="">Dessert
+		<SELECT NAME="Rubrique" onChange='Choix(this.form)'>
+			<OPTION>-- Choisissez une rubrique ---</OPTION>
+			<OPTION>Accompagnement</OPTION>
+			<OPTION>Apéritif</OPTION>
+			<OPTION>Entrée</OPTION>
 		</SELECT>
-		</FORM>
 
-
-		<br>
-		<label>Sous_Type: </label>
-
-		<FORM NAME="Choix2">
-		<SELECT NAME="Liste2" onChange="Lien2()">
-		<OPTION VALUE="">Choisir une option
-		<OPTION VALUE="">Accompagnement
-		<OPTION VALUE="">Apéritif
-		<OPTION VALUE="">Entrée
-		<OPTION VALUE="">Plat
-		<OPTION VALUE="">Des
+		<SELECT NAME="Page">
+			<OPTION>-- Choisissez une page ---</OPTION>
+			<OPTION></OPTION>
+			<OPTION></OPTION>
+			<OPTION></OPTION>
 		</SELECT>
-		</FORM>
 
 		<br>
 		<button class= "btn btn-primary" type= "submit" style="margin-bottom : 50px"> Enregistrer </button>
