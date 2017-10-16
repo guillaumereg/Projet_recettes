@@ -4,6 +4,22 @@
 	</div>
 	<div style="background-color: white;padding: 25px 25px 25px 25px;margin-bottom: 50px">
 
+				<table  class="table" style="margin-top : 50px; color:white; font-size: 15px;" >
+					<tr>
+							<td> <strong> Titre </strong> </td>
+							<td> <strong> Auteur </strong> </td>
+							<td> <strong> Favori </strong> </td>
+					</tr>
+					<tr ng-repeat="recipe in recipes">
+							<td>{{recipe.recipeTitle}</td>
+							<td>{{recipe.author}</td>
+							<td>
+								<button ng-click="suppfavoriteRecipe(recipe)" type="button" class="btnFavori"></button>
+							</td>
+					</tr>
+				</table>
+
+
 					<td>
 						 <button class= "btn btn-primary" style="width: 300px" ng-click="return(user)" type="button" > Return </button>
 					</td>

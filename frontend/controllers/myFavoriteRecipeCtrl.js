@@ -5,6 +5,16 @@ angular.module('myFavoriteRecipeController', ['authServices','userServices','rec
           $scope.return = function(user) {
               $location.path('/myProfil');
           }
-
+          Auth.getUser().then(function(data){
+              Recipe.searchRecipes()
+                .then(function(data){
+                  if (data.data.success) {
+                      $scope.recipes = data.data.recipes;
+                  }
+                  else {
+                      console.log(data.data.message);
+                  }
+              });
+          });
 
   });
